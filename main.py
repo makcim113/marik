@@ -20,8 +20,14 @@ while True:
         numbers.append(str1)
     elif type(str1) == str:
         strings.append(str1)
+
 j = 0
-for i in strings:
-    new_arry.append(strings[j] + numbers[j])
-    j += 1
-print(numbers, strings, new_arry)
+while j < len(strings):
+    if len(numbers) <= j:
+        strings[j] += "!"
+        j += 1
+    else:
+        strings[j] += numbers[j]
+        j += 1
+
+print(strings)
