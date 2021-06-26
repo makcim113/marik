@@ -1,4 +1,5 @@
 a = input("введите строку: ").split()
 print(a)
 a = list(map(str.swapcase, a))
+a = ' '.join(a)
 print(a)
