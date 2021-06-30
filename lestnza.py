@@ -1,12 +1,14 @@
-from random import randint
+def recurs(i, step=[]):
+    if i > 10:
+        i = 10
+    step.append(i)
+    if i >= 10:
+        print(step)
+        return True
 
-lestiza = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-x = 0
-while x < len(lestiza):
-    i = randint(1, 4)
-    print(lestiza[x])
-    x += i
+    arr = [1, 2, 3, 4, 5]
+    for a in arr:
+        recurs(i + a, step.copy())
 
 
-
+recurs(1)
